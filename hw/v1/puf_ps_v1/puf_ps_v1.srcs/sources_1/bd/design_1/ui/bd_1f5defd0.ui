@@ -1,0 +1,210 @@
+{
+   "ActiveEmotionalView":"No Loops",
+   "Addressing View_Layers":"/processing_system7_0_FCLK_RESET0_N:false|/rst_ps7_0_34M_peripheral_aresetn:false|/processing_system7_0_FCLK_CLK0:false|",
+   "Addressing View_ScaleFactor":"1.0",
+   "Addressing View_TopLeft":"-511,-83",
+   "Color Coded_ScaleFactor":"0.717117",
+   "Color Coded_TopLeft":"-517,0",
+   "Default View_Layers":"/processing_system7_0_FCLK_RESET0_N:true|/rst_ps7_0_34M_peripheral_aresetn:true|/processing_system7_0_FCLK_CLK0:true|",
+   "Default View_ScaleFactor":"0.451351",
+   "Default View_TopLeft":"-1808,0",
+   "Display-PortTypeClock":"true",
+   "Display-PortTypeOthers":"true",
+   "Display-PortTypeReset":"true",
+   "ExpandedHierarchyInLayout":"",
+   "Grouping and No Loops_ExpandedHierarchyInLayout":"",
+   "Grouping and No Loops_Layout":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:10.0 non-TLS
+#  -string -flagsOSRD
+preplace port group_1 -pg 1 -lvl 4 -x 1260 -y 560 -defaultsOSRD
+preplace inst ring_oscillator_puf_0 -pg 1 -lvl 2 -x 570 -y 60 -swap {2 0 1 11 9 10 3 8 4 5 6 7} -defaultsOSRD -pinDir clk left -pinY clk 180L -pinDir reset_n left -pinY reset_n 0L -pinDir enable left -pinY enable 120L -pinDir ack_to_pl right -pinY ack_to_pl 180R -pinBusDir response right -pinBusY response 140R -pinDir ready_to_ps right -pinY ready_to_ps 160R -pinBusDir sampled_lfsr_ros_counters right -pinBusY sampled_lfsr_ros_counters 20R -pinDir sampled_lfsr_ros_ready right -pinY sampled_lfsr_ros_ready 120R -pinDir sampled_lfsr_ros_ack right -pinY sampled_lfsr_ros_ack 40R -pinBusDir sampled_main_ros_counters right -pinBusY sampled_main_ros_counters 60R -pinDir sampled_main_ros_ready right -pinY sampled_main_ros_ready 80R -pinDir sampled_main_ros_ack right -pinY sampled_main_ros_ack 100R
+preplace inst processing_system7_0 -pg 1 -lvl 1 -x 190 -y 300 -swap {0 1 2 3 4 9 6 7 8 5 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50} -defaultsOSRD -pinBusDir group_1 right -pinBusY group_1 0R -pinDir GPIO_0 right -pinY GPIO_0 20R -pinDir GPIO_0.GPIO_I right -pinY GPIO_0.GPIO_I 40R -pinDir GPIO_0.GPIO_O right -pinY GPIO_0.GPIO_O 60R -pinDir USBIND_0 right -pinY USBIND_0 100R -pinDir M_AXI_GP0 right -pinY M_AXI_GP0 80R -pinDir M_AXI_GP0_ACLK right -pinY M_AXI_GP0_ACLK 120R -pinDir FCLK_CLK0 right -pinY FCLK_CLK0 140R -pinDir FCLK_RESET0_N right -pinY FCLK_RESET0_N 160R
+preplace inst lfsr_ros_counters_v1_0 -pg 1 -lvl 3 -x 1090 -y 60 -swap {0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 22 21 23 24} -defaultsOSRD -pinDir s00_axi left -pinY s00_axi 0L -pinBusDir sampled_lfsr_ros_counters left -pinBusY sampled_lfsr_ros_counters 20L -pinDir sampled_lfsr_ros_ready left -pinY sampled_lfsr_ros_ready 120L -pinDir sampled_lfsr_ros_ack left -pinY sampled_lfsr_ros_ack 40L -pinDir s00_axi_aclk left -pinY s00_axi_aclk 220L -pinDir s00_axi_aresetn left -pinY s00_axi_aresetn 240L
+preplace inst main_ros_counters_v1_0 -pg 1 -lvl 3 -x 1090 -y 400 -defaultsOSRD -pinDir s00_axi left -pinY s00_axi 0L -pinBusDir sampled_main_ros_counters left -pinBusY sampled_main_ros_counters 20L -pinDir sampled_main_ros_ready left -pinY sampled_main_ros_ready 40L -pinDir sampled_main_ros_ack left -pinY sampled_main_ros_ack 60L -pinDir s00_axi_aclk left -pinY s00_axi_aclk 80L -pinDir s00_axi_aresetn left -pinY s00_axi_aresetn 100L
+preplace inst xlconcat_0 -pg 1 -lvl 3 -x 1090 -y 820 -swap {2 1 0 3} -defaultsOSRD -pinBusDir In0 left -pinBusY In0 40L -pinBusDir In1 left -pinBusY In1 20L -pinBusDir In2 left -pinBusY In2 0L -pinBusDir dout left -pinBusY dout 60L
+preplace inst smartconnect_0 -pg 1 -lvl 2 -x 570 -y 380 -defaultsOSRD -pinDir S00_AXI left -pinY S00_AXI 0L -pinDir M00_AXI right -pinY M00_AXI 0R -pinDir M01_AXI right -pinY M01_AXI 20R -pinDir M02_AXI right -pinY M02_AXI 240R -pinDir aclk left -pinY aclk 20L -pinDir aresetn left -pinY aresetn 240L
+preplace inst rst_ps7_0_34M -pg 1 -lvl 1 -x 190 -y 580 -swap {0 1 2 3 4 6 7 8 9 5} -defaultsOSRD -pinDir slowest_sync_clk right -pinY slowest_sync_clk 0R -pinDir ext_reset_in left -pinY ext_reset_in 0L -pinDir aux_reset_in left -pinY aux_reset_in 20L -pinDir mb_debug_sys_rst left -pinY mb_debug_sys_rst 40L -pinDir dcm_locked left -pinY dcm_locked 60L -pinDir mb_reset right -pinY mb_reset 60R -pinBusDir bus_struct_reset right -pinBusY bus_struct_reset 80R -pinBusDir peripheral_reset right -pinBusY peripheral_reset 100R -pinBusDir interconnect_aresetn right -pinBusY interconnect_aresetn 120R -pinBusDir peripheral_aresetn right -pinBusY peripheral_aresetn 40R
+preplace inst puf_response_v1_0 -pg 1 -lvl 3 -x 1090 -y 620 -defaultsOSRD -pinDir s00_axi left -pinY s00_axi 0L -pinBusDir response left -pinBusY response 20L -pinDir ready_to_puf_response_v1 left -pinY ready_to_puf_response_v1 40L -pinDir ack_to_pl left -pinY ack_to_pl 60L -pinDir s00_axi_aclk left -pinY s00_axi_aclk 80L -pinDir s00_axi_aresetn left -pinY s00_axi_aresetn 100L
+preplace inst xlslice_0 -pg 1 -lvl 1 -x 190 -y 60 -swap {1 0} -defaultsOSRD -pinBusDir Din right -pinBusY Din 20R -pinBusDir Dout right -pinBusY Dout 0R
+preplace inst xlslice_1 -pg 1 -lvl 1 -x 190 -y 180 -swap {1 0} -defaultsOSRD -pinBusDir Din right -pinBusY Din 20R -pinBusDir Dout right -pinBusY Dout 0R
+preplace netloc netgroup_1 1 1 3 NJ 300 760J 560 NJ
+preplace netloc lfsr_ros_counters_v1_0_sampled_lfsr_ros_ack 1 2 1 N 100
+preplace netloc main_ros_counters_v1_0_sampled_main_ros_ack 1 2 1 900 160n
+preplace netloc processing_system7_0_FCLK_CLK0 1 1 2 400 320 920
+preplace netloc processing_system7_0_FCLK_RESET0_N 1 0 2 20 520 360
+preplace netloc ring_oscillator_puf_0_sampled_lfsr_ros_counters 1 2 1 N 80
+preplace netloc ring_oscillator_puf_0_sampled_main_ros_counters 1 2 1 940 120n
+preplace netloc ring_oscillator_puf_0_sampled_main_ros_ready 1 2 1 820 140n
+preplace netloc rst_ps7_0_34M_peripheral_aresetn 1 1 2 400 680 780
+preplace netloc xlconcat_0_dout 1 1 2 380 880 NJ
+preplace netloc ring_oscillator_puf_0_response 1 2 1 880 200n
+preplace netloc ring_oscillator_puf_0_sampled_lfsr_ros_ready 1 2 1 860 180n
+preplace netloc ring_oscillator_puf_0_ready_to_ps 1 2 1 740 220n
+preplace netloc puf_response_v1_0_ack_to_pl 1 2 1 800 240n
+preplace netloc xlslice_0_Dout 1 1 1 N 60
+preplace netloc xlslice_1_Dout 1 1 1 N 180
+preplace netloc Net 1 1 1 360 80n
+preplace netloc processing_system7_0_M_AXI_GP0 1 1 1 N 380
+preplace netloc smartconnect_0_M00_AXI 1 2 1 840 60n
+preplace netloc smartconnect_0_M01_AXI 1 2 1 N 400
+preplace netloc smartconnect_0_M02_AXI 1 2 1 N 620
+levelinfo -pg 1 0 190 570 1090 1260
+pagesize -pg 1 -db -bbox -sgen 0 0 1370 940
+",
+   "Grouping and No Loops_ScaleFactor":"0.717936",
+   "Grouping and No Loops_TopLeft":"-611,-52",
+   "No Loops_ExpandedHierarchyInLayout":"",
+   "No Loops_Layout":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:10.0 non-TLS
+#  -string -flagsOSRD
+preplace port DDR -pg 1 -lvl 7 -x 1980 -y 260 -defaultsOSRD
+preplace port FIXED_IO -pg 1 -lvl 7 -x 1980 -y 290 -defaultsOSRD
+preplace inst smartconnect_0 -pg 1 -lvl 2 -x 450 -y 390 -defaultsOSRD -pinDir S00_AXI left -pinY S00_AXI 0L -pinDir M00_AXI right -pinY M00_AXI 120R -pinDir M01_AXI right -pinY M01_AXI 360R -pinDir M02_AXI right -pinY M02_AXI 580R -pinDir aclk left -pinY aclk 60L -pinDir aresetn right -pinY aresetn 600R
+preplace inst xlslice_0 -pg 1 -lvl 2 -x 450 -y 60 -defaultsOSRD -pinBusDir Din left -pinBusY Din 80L -pinBusDir Dout right -pinBusY Dout 0R
+preplace inst xlslice_1 -pg 1 -lvl 3 -x 820 -y 370 -defaultsOSRD -pinBusDir Din left -pinBusY Din 0L -pinBusDir Dout right -pinBusY Dout 0R
+preplace inst rst_ps7_0_34M -pg 1 -lvl 3 -x 820 -y 60 -swap {3 4 0 1 2 5 6 7 8 9} -defaultsOSRD -pinDir slowest_sync_clk left -pinY slowest_sync_clk 60L -pinDir ext_reset_in left -pinY ext_reset_in 80L -pinDir aux_reset_in left -pinY aux_reset_in 0L -pinDir mb_debug_sys_rst left -pinY mb_debug_sys_rst 20L -pinDir dcm_locked left -pinY dcm_locked 40L -pinDir mb_reset right -pinY mb_reset 0R -pinBusDir bus_struct_reset right -pinBusY bus_struct_reset 20R -pinBusDir peripheral_reset right -pinBusY peripheral_reset 40R -pinBusDir interconnect_aresetn right -pinBusY interconnect_aresetn 60R -pinBusDir peripheral_aresetn right -pinBusY peripheral_aresetn 80R
+preplace inst sticky_bit_0 -pg 1 -lvl 5 -x 1690 -y 1030 -defaultsOSRD -pinDir clk left -pinY clk 0L -pinDir pulse_in left -pinY pulse_in 20L -pinDir clear left -pinY clear 40L -pinDir latched_out right -pinY latched_out 0R
+preplace inst sticky_bit_1 -pg 1 -lvl 5 -x 1690 -y 850 -defaultsOSRD -pinDir clk left -pinY clk 0L -pinDir pulse_in left -pinY pulse_in 20L -pinDir clear left -pinY clear 80L -pinDir latched_out right -pinY latched_out 0R
+preplace inst sticky_bit_2 -pg 1 -lvl 5 -x 1690 -y 430 -swap {0 2 1 3} -defaultsOSRD -pinDir clk left -pinY clk 0L -pinDir pulse_in left -pinY pulse_in 320L -pinDir clear left -pinY clear 20L -pinDir latched_out right -pinY latched_out 0R
+preplace inst xlconcat_1 -pg 1 -lvl 6 -x 1880 -y 350 -swap {4 3 2 1 0} -defaultsOSRD -pinBusDir In0 left -pinBusY In0 820L -pinBusDir In1 left -pinBusY In1 680L -pinBusDir In2 left -pinBusY In2 500L -pinBusDir In3 left -pinBusY In3 80L -pinBusDir dout left -pinBusY dout 0L
+preplace inst xlconstant_0 -pg 1 -lvl 5 -x 1690 -y 1170 -defaultsOSRD -pinBusDir dout right -pinBusY dout 0R
+preplace inst xlslice_2 -pg 1 -lvl 4 -x 1300 -y 1030 -defaultsOSRD -pinBusDir Din left -pinBusY Din 0L -pinBusDir Dout right -pinBusY Dout 40R
+preplace inst xlslice_3 -pg 1 -lvl 4 -x 1300 -y 930 -defaultsOSRD -pinBusDir Din left -pinBusY Din 0L -pinBusDir Dout right -pinBusY Dout 0R
+preplace inst xlslice_4 -pg 1 -lvl 4 -x 1300 -y 450 -defaultsOSRD -pinBusDir Din left -pinBusY Din 0L -pinBusDir Dout right -pinBusY Dout 0R
+preplace inst processing_system7_0 -pg 1 -lvl 1 -x 150 -y 180 -swap {0 1 2 3 20 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 27 21 22 23 24 25 26 4 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 71 72 70} -defaultsOSRD -pinDir GPIO_0 right -pinY GPIO_0 0R -pinDir GPIO_0.GPIO_I right -pinY GPIO_0.GPIO_I 20R -pinDir GPIO_0.GPIO_O right -pinY GPIO_0.GPIO_O 40R -pinDir DDR right -pinY DDR 80R -pinDir FIXED_IO right -pinY FIXED_IO 110R -pinDir USBIND_0 right -pinY USBIND_0 60R -pinDir M_AXI_GP0 right -pinY M_AXI_GP0 210R -pinDir M_AXI_GP0_ACLK right -pinY M_AXI_GP0_ACLK 250R -pinDir FCLK_CLK0 right -pinY FCLK_CLK0 270R -pinDir FCLK_RESET0_N right -pinY FCLK_RESET0_N 230R
+preplace inst lfsr_ros_counters_v1_0 -pg 1 -lvl 3 -x 820 -y 510 -swap {0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 21 20 22 23 24} -defaultsOSRD -pinDir s00_axi left -pinY s00_axi 0L -pinBusDir sampled_lfsr_ros_counters right -pinBusY sampled_lfsr_ros_counters 120R -pinDir sampled_lfsr_ros_ready right -pinY sampled_lfsr_ros_ready 0R -pinDir sampled_lfsr_ros_ack right -pinY sampled_lfsr_ros_ack 140R -pinDir s00_axi_aclk left -pinY s00_axi_aclk 20L -pinDir s00_axi_aresetn left -pinY s00_axi_aresetn 40L
+preplace inst main_ros_counters_v1_0 -pg 1 -lvl 3 -x 820 -y 750 -swap {0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 22 21 23 24} -defaultsOSRD -pinDir s00_axi left -pinY s00_axi 0L -pinBusDir sampled_main_ros_counters right -pinBusY sampled_main_ros_counters 0R -pinDir sampled_main_ros_ready right -pinY sampled_main_ros_ready 120R -pinDir sampled_main_ros_ack right -pinY sampled_main_ros_ack 20R -pinDir s00_axi_aclk left -pinY s00_axi_aclk 20L -pinDir s00_axi_aresetn left -pinY s00_axi_aresetn 40L
+preplace inst puf_response_v1_0 -pg 1 -lvl 3 -x 820 -y 970 -swap {0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 21 22 20 23 24} -defaultsOSRD -pinDir s00_axi left -pinY s00_axi 0L -pinBusDir response right -pinBusY response 20R -pinDir ready_to_puf_response_v1 right -pinY ready_to_puf_response_v1 160R -pinDir ack_to_pl right -pinY ack_to_pl 0R -pinDir s00_axi_aclk left -pinY s00_axi_aclk 20L -pinDir s00_axi_aresetn left -pinY s00_axi_aresetn 40L
+preplace inst ring_oscillator_puf_1 -pg 1 -lvl 4 -x 1300 -y 570 -swap {1 2 0 9 11 5 3 10 4 6 7 8} -defaultsOSRD -pinDir clk left -pinY clk 20L -pinDir reset_n left -pinY reset_n 40L -pinDir enable left -pinY enable 0L -pinDir ack_to_pl left -pinY ack_to_pl 220L -pinBusDir response left -pinBusY response 240L -pinDir ready_to_ps right -pinY ready_to_ps 180R -pinBusDir sampled_lfsr_ros_counters left -pinBusY sampled_lfsr_ros_counters 60L -pinDir sampled_lfsr_ros_ready right -pinY sampled_lfsr_ros_ready 240R -pinDir sampled_lfsr_ros_ack left -pinY sampled_lfsr_ros_ack 80L -pinBusDir sampled_main_ros_counters left -pinBusY sampled_main_ros_counters 180L -pinDir sampled_main_ros_ready right -pinY sampled_main_ros_ready 220R -pinDir sampled_main_ros_ack left -pinY sampled_main_ros_ack 200L
+preplace netloc lfsr_ros_counters_v1_0_sampled_lfsr_ros_ack 1 3 1 N 650
+preplace netloc main_ros_counters_v1_0_sampled_main_ros_ack 1 3 1 N 770
+preplace netloc processing_system7_0_FCLK_CLK0 1 1 4 320 310 600 430 1070 390 1570
+preplace netloc processing_system7_1_FCLK_RESET0_N 1 1 2 300J 330 580
+preplace netloc processing_system7_1_GPIO_O 1 1 3 320 220 620 310 1030
+preplace netloc puf_response_v1_0_ack_to_pl 1 3 1 1050 790n
+preplace netloc ring_oscillator_puf_1_ready_to_ps 1 3 2 NJ 1130 1550
+preplace netloc ring_oscillator_puf_1_response 1 3 1 1070 810n
+preplace netloc ring_oscillator_puf_1_sampled_lfsr_ros_counters 1 3 1 N 630
+preplace netloc ring_oscillator_puf_1_sampled_lfsr_ros_ready 1 3 2 N 510 1530
+preplace netloc ring_oscillator_puf_1_sampled_main_ros_counters 1 3 1 N 750
+preplace netloc ring_oscillator_puf_1_sampled_main_ros_ready 1 3 2 N 870 1510
+preplace netloc rst_ps7_0_34M_peripheral_aresetn 1 2 2 580 450 1010
+preplace netloc sticky_bit_0_latched_out 1 5 1 N 1030
+preplace netloc sticky_bit_1_latched_out 1 5 1 N 850
+preplace netloc sticky_bit_2_latched_out 1 5 1 N 430
+preplace netloc xlconcat_1_dout 1 1 5 NJ 200 NJ 200 NJ 200 NJ 200 1790
+preplace netloc xlconstant_0_dout 1 5 1 N 1170
+preplace netloc xlslice_0_Dout 1 2 1 NJ 60
+preplace netloc xlslice_1_Dout 1 3 1 1050J 370n
+preplace netloc xlslice_2_Dout 1 4 1 NJ 1070
+preplace netloc xlslice_3_Dout 1 4 1 NJ 930
+preplace netloc xlslice_4_Dout 1 4 1 NJ 450
+preplace netloc processing_system7_0_DDR 1 1 6 NJ 260 NJ 260 NJ 260 NJ 260 NJ 260 NJ
+preplace netloc processing_system7_0_FIXED_IO 1 1 6 NJ 290 NJ 290 NJ 290 NJ 290 NJ 290 NJ
+preplace netloc processing_system7_1_M_AXI_GP0 1 1 1 N 390
+preplace netloc smartconnect_0_M00_AXI 1 2 1 N 510
+preplace netloc smartconnect_0_M01_AXI 1 2 1 N 750
+preplace netloc smartconnect_0_M02_AXI 1 2 1 N 970
+levelinfo -pg 1 0 150 450 820 1300 1690 1880 1980
+pagesize -pg 1 -db -bbox -sgen 0 0 2090 1230
+",
+   "No Loops_PinnedBlocks":"",
+   "No Loops_PinnedPorts":"",
+   "No Loops_ScaleFactor":"0.41371",
+   "No Loops_TopLeft":"2,-181",
+   "Reduced Jogs_ExpandedHierarchyInLayout":"",
+   "Reduced Jogs_Layout":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:10.0 non-TLS
+#  -string -flagsOSRD
+preplace port DDR -pg 1 -lvl 5 -x 1420 -y 820 -defaultsOSRD
+preplace port FIXED_IO -pg 1 -lvl 5 -x 1420 -y 850 -defaultsOSRD
+preplace port GPIO_0_0 -pg 1 -lvl 5 -x 1420 -y 740 -defaultsOSRD
+preplace inst processing_system7_0 -pg 1 -lvl 2 -x 440 -y 740 -swap {0 1 2 3 20 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 27 21 22 23 24 25 26 31 28 29 30 4 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 72 71} -defaultsOSRD -pinY GPIO_0 0R -pinY GPIO_0.GPIO_I 20R -pinY GPIO_0.GPIO_O 40R -pinY DDR 80R -pinY FIXED_IO 110R -pinY USBIND_0 130R -pinY M_AXI_GP0 60R -pinY M_AXI_GP0_ACLK 0L -pinY FCLK_CLK0 170R -pinY FCLK_RESET0_N 150R
+preplace inst xlslice_0 -pg 1 -lvl 1 -x 120 -y 400 -defaultsOSRD -pinBusY Din 0L -pinBusY Dout 0R
+preplace inst xlslice_1 -pg 1 -lvl 1 -x 120 -y 200 -defaultsOSRD -pinBusY Din 0L -pinBusY Dout 0R
+preplace inst xlslice_2 -pg 1 -lvl 1 -x 120 -y 300 -defaultsOSRD -pinBusY Din 0L -pinBusY Dout 0R
+preplace inst xlconcat_0 -pg 1 -lvl 3 -x 870 -y 260 -swap {1 0 2} -defaultsOSRD -pinBusY In0 20L -pinBusY In1 0L -pinBusY dout 100R
+preplace inst xlconstant_0 -pg 1 -lvl 2 -x 440 -y 60 -defaultsOSRD -pinBusY dout 0R
+preplace inst xlconcat_1 -pg 1 -lvl 4 -x 1200 -y 180 -defaultsOSRD -pinBusY In0 0L -pinBusY In1 20L -pinBusY In2 200L -pinBusY dout 200R
+preplace inst smartconnect_0 -pg 1 -lvl 3 -x 870 -y 500 -defaultsOSRD -pinY S00_AXI 60L -pinY M00_AXI 0R -pinY aclk 80L -pinY aresetn 100L
+preplace inst proc_sys_reset_0 -pg 1 -lvl 2 -x 440 -y 560 -swap {4 0 1 2 3 5 6 7 8 9} -defaultsOSRD -pinY slowest_sync_clk 80L -pinY ext_reset_in 0L -pinY aux_reset_in 20L -pinY mb_debug_sys_rst 40L -pinY dcm_locked 60L -pinY mb_reset 0R -pinBusY bus_struct_reset 20R -pinBusY peripheral_reset 40R -pinBusY interconnect_aresetn 60R -pinBusY peripheral_aresetn 80R
+preplace inst puf_regs_0 -pg 1 -lvl 4 -x 1200 -y 500 -defaultsOSRD -pinY S00_AXI 0L -pinBusY puf_regs 20L -pinY sampled_counters_ready 40L -pinY sampled_counters_ack 0R -pinY s00_axi_aclk 160L -pinY s00_axi_aresetn 180L
+preplace inst ring_oscillator_puf_0 -pg 1 -lvl 2 -x 440 -y 180 -swap {6 1 2 3 4 5 0 7 8} -defaultsOSRD -pinY clk 240L -pinY reset_n 20L -pinY enable 120L -pinY ack_to_pl 220L -pinBusY response 0R -pinY ready_to_ps 20R -pinY sampled_counters_ack_lfsr 0L -pinBusY sampled_counters 100R -pinY sampled_counters_ready_lfsr 240R
+preplace netloc Net 1 2 2 740 680 N
+preplace netloc processing_system7_0_FCLK_CLK0 1 1 3 220 480 680 660 NJ
+preplace netloc processing_system7_0_FCLK_RESET0_N 1 1 2 240 500 660
+preplace netloc processing_system7_0_GPIO_O 1 0 3 20 970 NJ 970 640
+preplace netloc puf_regs_0_sampled_counters_ack 1 1 4 220 120 NJ 120 NJ 120 1400
+preplace netloc ring_oscillator_puf_0_ready_to_ps 1 2 2 NJ 200 N
+preplace netloc ring_oscillator_puf_0_response 1 2 2 NJ 180 N
+preplace netloc ring_oscillator_puf_0_sampled_counters 1 2 1 N 280
+preplace netloc ring_oscillator_puf_0_sampled_counters_ready_lfsr 1 2 2 NJ 420 1020
+preplace netloc xlconcat_0_dout 1 3 1 1000 360n
+preplace netloc xlconcat_1_dout 1 2 3 700 440 NJ 440 1380
+preplace netloc xlconstant_0_dout 1 2 1 740J 60n
+preplace netloc xlslice_0_Dout 1 1 1 NJ 400
+preplace netloc xlslice_1_Dout 1 1 1 NJ 200
+preplace netloc xlslice_2_Dout 1 1 1 NJ 300
+preplace netloc processing_system7_0_DDR 1 2 3 NJ 820 NJ 820 NJ
+preplace netloc processing_system7_0_FIXED_IO 1 2 3 NJ 850 NJ 850 NJ
+preplace netloc processing_system7_0_GPIO_0 1 2 3 NJ 740 NJ 740 NJ
+preplace netloc processing_system7_0_M_AXI_GP0 1 2 1 720 560n
+preplace netloc smartconnect_0_M00_AXI 1 3 1 N 500
+levelinfo -pg 1 0 120 440 870 1200 1420
+pagesize -pg 1 -db -bbox -sgen 0 0 1530 980
+",
+   "Reduced Jogs_ScaleFactor":"0.470423",
+   "Reduced Jogs_TopLeft":"-1637,0",
+   "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:10.0 non-TLS
+#  -string -flagsOSRD
+preplace inst smartconnect_0 -pg 1 -lvl 2 -x 560 -y 310 -swap {0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 100 99} -defaultsOSRD
+preplace inst xlslice_0 -pg 1 -lvl 2 -x 560 -y 700 -defaultsOSRD
+preplace inst xlslice_1 -pg 1 -lvl 3 -x 970 -y 900 -defaultsOSRD
+preplace inst rst_ps7_0_34M -pg 1 -lvl 3 -x 970 -y 760 -swap {0 2 1 3 4 6 7 8 9 5} -defaultsOSRD
+preplace inst sticky_bit_0 -pg 1 -lvl 5 -x 1800 -y 1000 -swap {2 0 1 3} -defaultsOSRD
+preplace inst sticky_bit_1 -pg 1 -lvl 5 -x 1800 -y 1260 -swap {1 0 2 3} -defaultsOSRD
+preplace inst sticky_bit_2 -pg 1 -lvl 5 -x 1800 -y 1400 -swap {1 0 2 3} -defaultsOSRD
+preplace inst xlconcat_1 -pg 1 -lvl 6 -x 2000 -y 1170 -defaultsOSRD
+preplace inst xlconstant_0 -pg 1 -lvl 5 -x 1800 -y 1140 -defaultsOSRD
+preplace inst xlslice_2 -pg 1 -lvl 3 -x 970 -y 1000 -defaultsOSRD
+preplace inst xlslice_3 -pg 1 -lvl 3 -x 970 -y 1280 -defaultsOSRD
+preplace inst xlslice_4 -pg 1 -lvl 3 -x 970 -y 1420 -defaultsOSRD
+preplace inst ring_oscillator_puf_1 -pg 1 -lvl 4 -x 1430 -y 360 -defaultsOSRD
+preplace inst lfsr_ros_counters_v1_0 -pg 1 -lvl 3 -x 970 -y 110 -swap {0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 21 20 22 23 24} -defaultsOSRD
+preplace inst main_ros_counters_v1_0 -pg 1 -lvl 3 -x 970 -y 350 -swap {0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 21 20 22 23 24} -defaultsOSRD
+preplace inst puf_response_v1_0 -pg 1 -lvl 3 -x 970 -y 560 -defaultsOSRD
+preplace inst processing_system7_0 -pg 1 -lvl 1 -x 210 -y 270 -swap {0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 31 28 29 30 27 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72} -defaultsOSRD
+preplace netloc lfsr_ros_counters_v1_0_sampled_lfsr_ros_ack 1 3 1 1210 110n
+preplace netloc main_ros_counters_v1_0_sampled_main_ros_ack 1 3 1 1180 350n
+preplace netloc processing_system7_0_FCLK_CLK0 1 0 5 20 410 410 410 710 250 1220 250 1680
+preplace netloc processing_system7_1_FCLK_RESET0_N 1 1 2 400 760 NJ
+preplace netloc processing_system7_1_GPIO_O 1 1 2 420 640 700
+preplace netloc puf_response_v1_0_ack_to_pl 1 3 1 1200 370n
+preplace netloc ring_oscillator_puf_1_ready_to_ps 1 2 3 760 660 NJ 660 1670
+preplace netloc ring_oscillator_puf_1_response 1 2 3 740 230 NJ 230 1640
+preplace netloc ring_oscillator_puf_1_sampled_lfsr_ros_counters 1 2 3 750 210 NJ 210 1660
+preplace netloc ring_oscillator_puf_1_sampled_lfsr_ros_ready 1 2 3 710 10 NJ 10 1700
+preplace netloc ring_oscillator_puf_1_sampled_main_ros_counters 1 2 3 750 240 NJ 240 1650
+preplace netloc ring_oscillator_puf_1_sampled_main_ros_ready 1 2 3 760 450 1180J 470 1650
+preplace netloc rst_ps7_0_34M_peripheral_aresetn 1 1 3 430 230 730 460 1190
+preplace netloc sticky_bit_0_latched_out 1 5 1 1900 1000n
+preplace netloc sticky_bit_1_latched_out 1 5 1 1900 1180n
+preplace netloc sticky_bit_2_latched_out 1 5 1 1910 1200n
+preplace netloc xlconcat_1_dout 1 1 6 NJ 210 720J 220 NJ 220 1690J 1080 NJ 1080 2090
+preplace netloc xlconstant_0_dout 1 5 1 NJ 1140
+preplace netloc xlslice_0_Dout 1 2 1 690J 700n
+preplace netloc xlslice_1_Dout 1 3 1 1220J 350n
+preplace netloc xlslice_2_Dout 1 3 2 NJ 1000 NJ
+preplace netloc xlslice_3_Dout 1 3 2 NJ 1280 NJ
+preplace netloc xlslice_4_Dout 1 3 2 NJ 1420 NJ
+preplace netloc processing_system7_1_M_AXI_GP0 1 1 1 N 290
+preplace netloc smartconnect_0_M00_AXI 1 2 1 700 70n
+preplace netloc smartconnect_0_M01_AXI 1 2 1 N 310
+preplace netloc smartconnect_0_M02_AXI 1 2 1 700 330n
+levelinfo -pg 1 0 210 560 970 1430 1800 2000 2110
+pagesize -pg 1 -db -bbox -sgen 0 0 2110 1480
+"
+}
+{
+   "da_axi4_cnt":"10",
+   "da_board_cnt":"3",
+   "da_clkrst_cnt":"4",
+   "da_ps7_cnt":"7"
+}
